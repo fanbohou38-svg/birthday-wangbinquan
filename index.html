@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Cyber Birthday Galaxy · 赛博朋克生日宇宙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/index-DGEWcxGr.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-gqcsnhR2.css">
+</head>
+<body>
+  <canvas id="three-canvas"></canvas>
+  <canvas id="fx-canvas"></canvas>
+  <div id="fader"></div>
+
+  <!-- 第一幕：进入宇宙 -->
+  <section id="intro" class="screen ui">
+    <div class="intro-inner">
+      <p class="intro-sub">CYBER BIRTHDAY GALAXY</p>
+      <h1 class="intro-title">生日快乐宇宙</h1>
+      <button id="enter-btn" class="neon-btn big">ENTER THE GALAXY</button>
+      <p class="intro-tip">建议打开声音 · 支持手机与电脑</p>
+    </div>
+  </section>
+
+  <!-- 顶部：音乐 + 动效设置 -->
+  <div id="audio-panel" class="ui glass hidden">
+    <input type="file" id="audio-file" accept="audio/*" hidden />
+    <button id="audio-toggle" class="icon-btn" title="播放/暂停">▶</button>
+    <input type="range" id="audio-volume" min="0" max="100" value="70" title="音量" />
+    <span id="audio-status">未选择音乐</span>
+    <button id="audio-pick" class="icon-btn" title="选择本地音乐">🎵</button>
+    <button id="fx-toggle" class="icon-btn" title="切换动效强度">✦</button>
+  </div>
+
+  <!-- 底部导航 -->
+  <div id="nav" class="ui glass hidden">
+    <button id="prev-btn" class="neon-btn small">←</button>
+    <div id="act-dots"></div>
+    <button id="next-btn" class="neon-btn small">→</button>
+  </div>
+
+  <!-- 提示文字 -->
+  <div id="hint" class="ui hidden"></div>
+
+  <!-- 粒子文字面板 -->
+  <div id="text-panel" class="ui glass hidden">
+    <button id="text-switch" class="neon-btn small">切换文字 ⟳</button>
+  </div>
+
+  <!-- 蛋糕面板 -->
+  <div id="cake-panel" class="ui hidden">
+    <button id="blow-btn" class="neon-btn big">🌬 吹灭蜡烛</button>
+    <button id="cake-next" class="neon-btn small">换个照片 ⟳</button>
+  </div>
+
+  <!-- 最终祝福 -->
+  <section id="final" class="screen ui hidden">
+    <div class="final-inner">
+      <h2 class="final-title">HAPPY BIRTHDAY!</h2>
+      <div id="blessing"></div>
+      <p class="final-en" id="final-en">THE UNIVERSE IS BETTER WITH YOU.</p>
+      <p class="final-zh">祝你生日快乐！</p>
+      <button id="replay-btn" class="neon-btn">重新播放 ↺</button>
+    </div>
+  </section>
+
+  <div id="toast" class="hidden"></div>
+
+</body>
+</html>
